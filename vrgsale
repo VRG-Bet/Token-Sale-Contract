@@ -1,5 +1,5 @@
 /**
- *Submitted for verification at Etherscan.io on 2020-12-12
+ *Submitted for verification at Etherscan.io on 2020-12-18
 */
 
 // SPDX-License-Identifier: MIT
@@ -140,18 +140,18 @@ contract VRGToken is Ownable, StandardToken {
     
     constructor() {
         _totalSupply = 100000000 ether;
-        // Selling Contract - 16000000 tokens
-        sellingcontract = (0x535D7c2F4e7adE018547eF9DD0348DC84c3E09dE);
-        balances[sellingcontract] = 16000000 ether;
-        emit Transfer(address(0x0), sellingcontract, (16000000 ether));
+        // Selling Contract - 17000000 tokens
+        sellingcontract = (0xbFB7B47d332Db4aCD120A4E8cb263E0d89C70430);
+        balances[sellingcontract] = 17000000 ether;
+        emit Transfer(address(0x0), sellingcontract, (17000000 ether));
         
         // Marketing wallet - 4000000 tokens
-        address marketing = 0x911D5FE8ac63954a6652F240927B09201238d1f9;
+        address marketing = 0xe317f3DB5f170c90b89c95C1B61a5811AD6d9794;
         balances[marketing] = 4000000 ether;
         emit Transfer(address(0x0), marketing, (4000000 ether));
         
         // Team wallet - 4000000 tokens (Locked - progressive release)
-        address team = 0xa6549a3eC56F5b8bA7A08809D09B66F605CD6b25;
+        address team = 0x80884b6102Af05C118E6bf56cc733E0747621685;
         balances[team] = 4000000 ether;
         emit Transfer(address(0x0), team, (4000000 ether));
         // locking balances
@@ -165,18 +165,18 @@ contract VRGToken is Ownable, StandardToken {
         // fourth release
         createUnlockPoint(team, uint8(4), (1000000 ether), (block.timestamp + (450 days)));
         
-        // Uniswap and exchanges - 26000000 tokens locked until crowdsale ends
-        address exchanges = 0x95f582EB80b8AcB9a7FdC377aD0b0cF5731Aca57;  
-        balances[exchanges] = 26000000 ether;
-        emit Transfer(address(0x0), exchanges, (26000000 ether));
+        // Uniswap and exchanges - 25000000 tokens locked until crowdsale ends
+        address exchanges = 0x4a9753A90808D91E51fb6590ec940CE99a60B84b;  
+        balances[exchanges] = 25000000 ether;
+        emit Transfer(address(0x0), exchanges, (25000000 ether));
         // locking balances
-        lockedBalances[exchanges] = 26000000 ether;
-        createUnlockPoint(exchanges, uint8(1), (26000000 ether), 1609718399);
+        lockedBalances[exchanges] = 25000000 ether;
+        createUnlockPoint(exchanges, uint8(1), (25000000 ether), 1609693500);
         
         // Betting Platform tokens
         // Development - 2000000 for inmediate release and 
         // 48000000 locked - Releasing 12000000 every 90 days
-        address BettingPlatform = 0x4514CFBB6C80a46fd64484c19d0442fa5cb80EF1;  
+        address BettingPlatform = 0x0296dfbfF01C81FA7E2eB4D6cE035e555ce62Fe4;  
         balances[BettingPlatform] = 50000000 ether;
         emit Transfer(address(0x0), BettingPlatform, (50000000 ether));
         // locking balances
